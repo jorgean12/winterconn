@@ -11,7 +11,7 @@
 
 <style>
 
-/* ===== LAYOUT ===== */
+/* ===== GENERAL ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -54,7 +54,7 @@ section {
     border-radius: 10px;
 }
 
-/* ===== MENU LINKS ===== */
+/* ===== MENU ===== */
 .nav-menu a {
     display: block;
     color: white;
@@ -77,6 +77,11 @@ section {
     align-items: center;
     justify-content: center;
     margin: 5px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
 }
 
 .facebook:hover { background: #1877f2; }
@@ -121,10 +126,21 @@ section {
         <img src="assets/img/1.jpeg" class="img-fluid rounded-circle">
     </div>
 
+    <!-- REDES (YA CORREGIDAS) -->
     <div class="social-links text-center">
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://wa.me/7751850054" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="facebook">
+            <i class="bx bxl-facebook"></i>
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="instagram">
+            <i class="bx bxl-instagram"></i>
+        </a>
+
+        <a href="https://wa.me/527751376971" target="_blank" rel="noopener noreferrer" class="whatsapp">
+            <i class="bx bxl-whatsapp"></i>
+        </a>
+
     </div>
 
     <nav class="nav-menu">
@@ -147,12 +163,15 @@ section {
 
 <section id="about">
     <h2>¿Quiénes somos?</h2>
-    <p>Empresa mexicana fundada en 2018.</p>
+    <p>Empresa mexicana fundada en 2018 en Hidalgo.</p>
 </section>
 
 <section id="resume">
     <h2>Misión</h2>
-    <p>Brindar servicios de calidad.</p>
+    <p>Brindar servicios de alta calidad.</p>
+
+    <h2>Visión</h2>
+    <p>Ser líderes en conectividad.</p>
 </section>
 
 <section id="proyectos">
@@ -170,8 +189,8 @@ section {
 
 </main>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/527751376971" class="whatsapp-float">
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/527751376971" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
     <i class="bx bxl-whatsapp"></i>
 </a>
 
