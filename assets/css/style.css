@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# Estilo Profesional tipo PROFECO
+# Estilo Profesional tipo PROFECO (MEJORADO)
 --------------------------------------------------------------*/
 
 body {
@@ -56,8 +56,9 @@ h3 {
     padding: 20px;
 }
 
+/* LOGO PERFIL MEJORADO */
 #header .profile img {
-    width: 120px; /* más grande */
+    width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
@@ -65,7 +66,9 @@ h3 {
     padding: 5px;
     background: #fff;
     transition: 0.3s;
+    box-shadow: 0 0 20px rgba(20,157,221,0.5);
 }
+
 #header .profile img:hover {
     transform: scale(1.05);
 }
@@ -75,6 +78,32 @@ h3 {
     font-size: 20px;
 }
 
+/* REDES SOCIALES MEJORADAS */
+#header .profile .social-links a {
+    font-size: 22px;
+    display: inline-block;
+    background: #1e2a3a;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#header .profile .social-links a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(20,157,221,0.8);
+}
+
+/* Colores reales */
+#header .profile .social-links a.facebook:hover {
+    background: #1877f2;
+}
+
+#header .profile .social-links a.instagram:hover {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
 /* Menú */
 .nav-menu a {
     display: block;
@@ -82,6 +111,7 @@ h3 {
     color: #cfd8dc;
     border-radius: 5px;
     margin-bottom: 5px;
+    transition: 0.3s;
 }
 
 .nav-menu a:hover,
@@ -104,8 +134,9 @@ section {
     background: #fff;
     padding: 25px;
     margin-bottom: 25px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* Subtítulos */
@@ -154,15 +185,17 @@ table tr:nth-child(even) {
 --------------------------------------------------------------*/
 
 #portada {
-    background: #0b3d91;
+    background: linear-gradient(135deg, #0b3d91, #0d6efd);
     color: #fff;
     text-align: center;
     padding: 60px 20px;
+    border-radius: 12px;
 }
 
 #portada h1 {
     color: #fff;
     font-size: 32px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
 }
 
 #portada p {
@@ -177,10 +210,7 @@ table tr:nth-child(even) {
     background: #fff;
     border: 1px solid #ddd;
     padding: 20px;
-}
-
-.contact h4 {
-    color: #0b3d91;
+    border-radius: 8px;
 }
 
 /* Botón */
@@ -190,10 +220,12 @@ button, .button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 button:hover, .button:hover {
     background: #084298;
+    transform: translateY(-2px);
 }
 
 /*--------------------------------------------------------------
