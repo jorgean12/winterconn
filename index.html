@@ -8,7 +8,7 @@
     <title>INTERCONN Telecomunicaciones</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/ico/favicon.png">
+    <link rel="icon" href="assets/img/1.jpeg">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -19,6 +19,23 @@
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
+                    <script>
+                                    document.querySelectorAll('.scrollto').forEach(link => {
+                                        link.addEventListener('click', function(e) {
+                                            if (this.hash !== "") {
+                                                e.preventDefault();
+                                                const target = document.querySelector(this.hash);
+                                                if (target) {
+                                                    window.scrollTo({
+                                                        top: target.offsetTop - 10,
+                                                        behavior: 'smooth'
+                                                    });
+                                                }
+                                            }
+                                        });
+                                    });
+                </script>
 
 <body>
 
