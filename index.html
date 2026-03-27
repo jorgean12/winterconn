@@ -4,230 +4,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="INTERCONN Telecomunicaciones - Internet residencial y empresarial en Hidalgo">
     <title>INTERCONN Telecomunicaciones</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="assets/img/1.jpeg">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
     <!-- CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- ESTILOS NUEVOS -->
     <style>
-
-    /* ===== PORTADA NUEVA ===== */
+    /* ===== PORTADA PRO ===== */
     #portada {
         background: linear-gradient(135deg, #0b3d91, #1e88e5);
-        padding: 80px 20px;
-        margin-bottom: 30px;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 100px 20px;
+        border-radius: 15px;
         text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* efecto luz */
+    #portada::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 60%);
+        top: -50%;
+        left: -50%;
+        animation: brillo 6s infinite linear;
+    }
+
+    @keyframes brillo {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 
     .titulo-principal {
-        color: #fff;
-        font-size: 36px;
+        font-size: 38px;
         font-weight: 700;
-        margin-bottom: 10px;
+        animation: fadeDown 1s ease;
     }
 
     .subtitulo {
-        color: #e3f2fd;
         font-size: 18px;
+        margin-top: 10px;
+        animation: fadeUp 1.2s ease;
     }
 
-    /* ===== REDES SOCIALES ===== */
+    @keyframes fadeDown {
+        from { opacity: 0; transform: translateY(-40px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== REDES ===== */
     .social-links a {
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
         width: 45px;
         height: 45px;
-        margin: 5px;
-        border-radius: 50%;
         background: #1e2a38;
         color: #fff;
-        font-size: 20px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
         transition: 0.3s;
     }
 
-    .social-links a:hover {
-        transform: translateY(-5px);
+    .social-links a:hover { transform: translateY(-5px); }
+    .facebook:hover { background: #1877f2; }
+    .instagram:hover { background: #e1306c; }
+    .whatsapp:hover { background: #25d366; }
+
+    /* ===== WHATSAPP FLOAT ===== */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
-    .social-links .facebook:hover { background: #1877f2; }
-    .social-links .instagram:hover { background: #e1306c; }
-    .social-links .whatsapp:hover { background: #25d366; }
+    /* ===== ANIMACIONES SCROLL ===== */
+    .hidden {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: 0.8s;
+    }
 
+    .show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    section {
+        background: white;
+        margin: 20px;
+        padding: 30px;
+        border-radius: 10px;
+    }
     </style>
 
 </head>
 
 <body>
 
-<!-- BOTÓN MÓVIL -->
-<button class="mobile-nav-toggle d-xl-none"><i class="bx bx-menu"></i></button>
-
-<!-- ===== HEADER ===== -->
 <header id="header">
-    <div class="d-flex flex-column text-center">
+    <div class="text-center">
+        <img src="assets/img/1.jpeg" class="img-fluid rounded-circle">
 
-        <div class="profile">
-            <img src="assets/img/1.jpeg" alt="Logo INTERCONN" class="img-fluid rounded-circle">
-            
-            <div class="social-links mt-3">
-
-                <a href="https://www.facebook.com/interconn.ofice/" target="_blank" class="facebook">
-                    <i class="bx bxl-facebook"></i>
-                </a>
-
-                <a href=https://www.instagram.com/interconn_telecomunicacciones/" target="_blank" class="instagram">
-                    <i class="bx bxl-instagram"></i>
-                </a>
-
-                <a href="https://wa.me/7751850054" target="_blank" class="whatsapp">
-                    <i class="bx bxl-whatsapp"></i>
-                </a>
-
-            </div>
+        <div class="social-links mt-3">
+            <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://wa.me/527751376971" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
         </div>
-
-        <nav class="nav-menu">
-            <ul>
-                <li class="active"><a href="#portada" class="scrollto"><i class="bx bx-home"></i> Inicio</a></li>
-                <li><a href="#about" class="scrollto"><i class="bx bx-user"></i> ¿Quiénes somos?</a></li>
-                <li><a href="#resume" class="scrollto"><i class="bx bx-file"></i> Misión y Visión</a></li>
-                <li><a href="#proyectos" class="scrollto"><i class="bx bx-book"></i> Información</a></li>
-                <li><a href="#contact" class="scrollto"><i class="bx bx-envelope"></i> Contacto</a></li>
-            </ul>
-        </nav>
-
     </div>
 </header>
 
-<!-- ===== MAIN ===== -->
-<main id="main">
+<main>
 
-<!-- ===== PORTADA ===== -->
+<!-- PORTADA -->
 <section id="portada">
-    <div data-aos="fade-up">
-        <h1 class="titulo-principal">INTERCONN TELECOMUNICACIONES</h1>
-        <p class="subtitulo">
-            Conectividad moderna con 
-            <span class="typed" data-typed-items="Fibra óptica, Internet residencial, Internet empresarial, Soporte técnico"></span>
-        </p>
-    </div>
+    <h1 class="titulo-principal">INTERCONN TELECOMUNICACIONES</h1>
+    <p class="subtitulo">Conectividad moderna con internet de alta velocidad</p>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section id="about" class="about">
-    <div class="container">
-        <div class="section-title text-center">
-            <h2>INTERCONN TELECOMUNICACIONES</h2>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-4">
-                <img src="assets/img/somos.jpeg" class="img-fluid" alt="Equipo INTERCONN">
-            </div>
-
-            <div class="col-lg-8">
-                <h3>¿Quiénes somos?</h3>
-                <p>Empresa mexicana fundada en 2018 en el estado de Hidalgo.</p>
-            </div>
-        </div>
-    </div>
+<!-- ABOUT -->
+<section id="about">
+    <h2>¿Quiénes somos?</h2>
+    <p>Empresa mexicana fundada en 2018 en Hidalgo.</p>
 </section>
 
-<!-- ===== MISIÓN Y VISIÓN ===== -->
-<section id="resume" class="resume">
-    <div class="container">
-        <div class="section-title text-center">
-            <h2>Misión y Visión</h2>
-        </div>
+<!-- MISION -->
+<section id="resume">
+    <h2>Misión</h2>
+    <p>Brindar servicios de alta calidad.</p>
 
-        <div class="row">
-            <div class="col-lg-6">
-                <h3>Misión</h3>
-                <p>Brindar servicios de telecomunicaciones confiables y de alta calidad mediante tecnología de punta.</p>
-            </div>
-
-            <div class="col-lg-6">
-                <h3>Visión</h3>
-                <p>Ser referente en soluciones de conectividad en Hidalgo.</p>
-            </div>
-        </div>
-    </div>
+    <h2>Visión</h2>
+    <p>Ser líderes en conectividad.</p>
 </section>
 
-<!-- ===== DOCUMENTOS ===== -->
-<section id="proyectos" class="proyectos section-bg">
-    <div class="container text-center">
-        <div class="section-title">
-            <h2>Información</h2>
-        </div>
-
-        <ul class="list-unstyled">
-            <li><a href="https://jorgean12.github.io/winterconn/Título%20de%20concesión%20JAGC.pdf" target="_blank">Título de concesión</a></li>
-            <li><a href="https://jorgean12.github.io/winterconn/Resolución%20P-IFT-251023-483.pdf" target="_blank">Constancia IFT</a></li>
-            <li><a href="https://jorgean12.github.io/winterconn/tarifas.pdf" target="_blank">Guía de tarifas</a></li>
-        </ul>
-    </div>
+<!-- INFO -->
+<section id="proyectos">
+    <h2>Información</h2>
+    <ul>
+        <li><a href="#">Título de concesión</a></li>
+        <li><a href="#">Constancia IFT</a></li>
+        <li><a href="#">Tarifas</a></li>
+    </ul>
 </section>
 
-<!-- ===== CONTACTO ===== -->
-<section id="contact" class="contact">
-    <div class="container text-center">
-        <div class="section-title">
-            <h2>Contacto</h2>
-        </div>
-
-        <p><strong>Email:</strong> interconn.office08@gmail.com</p>
-        <p><strong>Dirección:</strong> Av. Morelos #43 A, Emiliano Zapata Hidalgo</p>
-        <p><strong>Tel / WhatsApp:</strong> 775 137 6971</p>
-    </div>
+<!-- CONTACTO -->
+<section id="contact">
+    <h2>Contacto</h2>
+    <p>WhatsApp: 775 137 6971</p>
 </section>
 
 </main>
 
-<!-- ===== FOOTER ===== -->
-<footer id="footer">
-    <div class="container text-center">
-        <p>© 2025 INTERCONN TELECOMUNICACIONES</p>
-    </div>
-</footer>
+<!-- WHATSAPP -->
+<a href="https://wa.me/527751376971" class="whatsapp-float" target="_blank">
+    <i class="bx bxl-whatsapp"></i>
+</a>
 
-<!-- JS -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/typed.js/typed.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/js/main.js"></script>
-
-<!-- SCROLL SUAVE -->
+<!-- SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('.scrollto').forEach(link => {
-        link.addEventListener('click', function(e) {
-            if (this.hash !== "") {
-                e.preventDefault();
-                const target = document.querySelector(this.hash);
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                }
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
             }
         });
+    });
+
+    sections.forEach(sec => {
+        sec.classList.add("hidden");
+        observer.observe(sec);
     });
 });
 </script>
