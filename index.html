@@ -2,201 +2,204 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INTERCONN Telecomunicaciones</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INTERCONN Telecomunicaciones</title>
 
-    <!-- CSS -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
-    <style>
-    /* ===== PORTADA PRO ===== */
-    #portada {
-        background: linear-gradient(135deg, #0b3d91, #1e88e5);
-        padding: 100px 20px;
-        border-radius: 15px;
-        text-align: center;
-        color: white;
-        position: relative;
-        overflow: hidden;
-    }
+<style>
 
-    /* efecto luz */
-    #portada::before {
-        content: "";
-        position: absolute;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 60%);
-        top: -50%;
-        left: -50%;
-        animation: brillo 6s infinite linear;
-    }
+/* ===== LAYOUT ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
 
-    @keyframes brillo {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
+/* ===== MENU LATERAL ===== */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100%;
+    background: #0b3d91;
+    padding: 20px;
+    color: white;
+    z-index: 999;
+}
 
-    .titulo-principal {
-        font-size: 38px;
-        font-weight: 700;
-        animation: fadeDown 1s ease;
-    }
+/* ===== CONTENIDO ===== */
+#main {
+    margin-left: 260px;
+    padding: 20px;
+}
 
-    .subtitulo {
-        font-size: 18px;
-        margin-top: 10px;
-        animation: fadeUp 1.2s ease;
-    }
+/* ===== PORTADA ===== */
+#portada {
+    background: linear-gradient(135deg, #0b3d91, #1e88e5);
+    padding: 80px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+}
 
-    @keyframes fadeDown {
-        from { opacity: 0; transform: translateY(-40px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+/* ===== SECCIONES ===== */
+section {
+    background: white;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 10px;
+}
 
-    @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(40px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+/* ===== MENU LINKS ===== */
+.nav-menu a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
 
-    /* ===== REDES ===== */
-    .social-links a {
-        display: inline-flex;
-        width: 45px;
-        height: 45px;
-        background: #1e2a38;
-        color: #fff;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        margin: 5px;
-        transition: 0.3s;
-    }
+.nav-menu a:hover {
+    background: rgba(255,255,255,0.2);
+}
 
-    .social-links a:hover { transform: translateY(-5px); }
-    .facebook:hover { background: #1877f2; }
-    .instagram:hover { background: #e1306c; }
-    .whatsapp:hover { background: #25d366; }
+/* ===== REDES ===== */
+.social-links a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: #1e2a38;
+    color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
 
-    /* ===== WHATSAPP FLOAT ===== */
-    .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #25d366;
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 30px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
+.facebook:hover { background: #1877f2; }
+.instagram:hover { background: #e1306c; }
+.whatsapp:hover { background: #25d366; }
 
-    /* ===== ANIMACIONES SCROLL ===== */
-    .hidden {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: 0.8s;
-    }
+/* ===== WHATSAPP ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .show {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ===== ANIMACIONES ===== */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-    section {
-        background: white;
-        margin: 20px;
-        padding: 30px;
-        border-radius: 10px;
-    }
-    </style>
+</style>
 
 </head>
 
 <body>
 
+<!-- MENU -->
 <header id="header">
+
     <div class="text-center">
         <img src="assets/img/1.jpeg" class="img-fluid rounded-circle">
-
-        <div class="social-links mt-3">
-            <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="https://wa.me/527751376971" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-        </div>
     </div>
+
+    <div class="social-links text-center">
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://wa.me/527751376971" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+    </div>
+
+    <nav class="nav-menu">
+        <a href="#portada" class="scrollto">Inicio</a>
+        <a href="#about" class="scrollto">¿Quiénes somos?</a>
+        <a href="#resume" class="scrollto">Misión y Visión</a>
+        <a href="#proyectos" class="scrollto">Información</a>
+        <a href="#contact" class="scrollto">Contacto</a>
+    </nav>
+
 </header>
 
-<main>
+<!-- CONTENIDO -->
+<main id="main">
 
-<!-- PORTADA -->
 <section id="portada">
-    <h1 class="titulo-principal">INTERCONN TELECOMUNICACIONES</h1>
-    <p class="subtitulo">Conectividad moderna con internet de alta velocidad</p>
+    <h1>INTERCONN TELECOMUNICACIONES</h1>
+    <p>Internet rápido y confiable</p>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
     <h2>¿Quiénes somos?</h2>
-    <p>Empresa mexicana fundada en 2018 en Hidalgo.</p>
+    <p>Empresa mexicana fundada en 2018.</p>
 </section>
 
-<!-- MISION -->
 <section id="resume">
     <h2>Misión</h2>
-    <p>Brindar servicios de alta calidad.</p>
-
-    <h2>Visión</h2>
-    <p>Ser líderes en conectividad.</p>
+    <p>Brindar servicios de calidad.</p>
 </section>
 
-<!-- INFO -->
 <section id="proyectos">
     <h2>Información</h2>
     <ul>
         <li><a href="#">Título de concesión</a></li>
         <li><a href="#">Constancia IFT</a></li>
-        <li><a href="#">Tarifas</a></li>
     </ul>
 </section>
 
-<!-- CONTACTO -->
 <section id="contact">
     <h2>Contacto</h2>
-    <p>WhatsApp: 775 137 6971</p>
+    <p>WhatsApp: 7751376971</p>
 </section>
 
 </main>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/527751376971" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/527751376971" class="whatsapp-float">
     <i class="bx bxl-whatsapp"></i>
 </a>
 
 <!-- SCRIPT -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll("section");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
+document.querySelectorAll('.scrollto').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
         });
     });
+});
 
-    sections.forEach(sec => {
-        sec.classList.add("hidden");
-        observer.observe(sec);
+// Animaciones
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
     });
+});
+
+sections.forEach(sec => {
+    sec.classList.add("hidden");
+    observer.observe(sec);
 });
 </script>
 
