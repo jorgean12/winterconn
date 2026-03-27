@@ -66,6 +66,9 @@ h3 {
     background: #fff;
     transition: 0.3s;
 }
+#header .profile img:hover {
+    transform: scale(1.05);
+}
 
 #header h1 {
     color: #fff;
