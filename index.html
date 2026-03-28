@@ -6,183 +6,95 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>INTERCONN Telecomunicaciones</title>
 
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+
 <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-
-<style>
-
-/* ===== GENERAL ===== */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f9;
-}
-
-/* ===== MENU LATERAL ===== */
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 260px;
-    height: 100%;
-    background: #0b3d91;
-    padding: 20px;
-    color: white;
-    z-index: 999;
-}
-
-/* ===== CONTENIDO ===== */
-#main {
-    margin-left: 260px;
-    padding: 20px;
-}
-
-/* ===== PORTADA ===== */
-#portada {
-    background: linear-gradient(135deg, #0b3d91, #1e88e5);
-    padding: 80px;
-    border-radius: 12px;
-    color: white;
-    text-align: center;
-}
-
-/* ===== SECCIONES ===== */
-section {
-    background: white;
-    margin-top: 20px;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-/* ===== MENU ===== */
-.nav-menu a {
-    display: block;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.nav-menu a:hover {
-    background: rgba(255,255,255,0.2);
-}
-
-/* ===== REDES ===== */
-.social-links a {
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    background: #1e2a38;
-    color: #fff;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    transform: translateY(-5px);
-}
-
-.facebook:hover { background: #1877f2; }
-.instagram:hover { background: #e1306c; }
-.whatsapp:hover { background: #25d366; }
-
-/* ===== WHATSAPP ===== */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ===== ANIMACIONES ===== */
-.hidden {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.8s;
-}
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-</style>
-
+<link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- MENU -->
+<!-- ===== MENU ===== -->
 <header id="header">
 
-    <div class="text-center">
+    <div class="profile text-center">
         <img src="assets/img/1.jpeg" class="img-fluid rounded-circle">
     </div>
 
-    <!-- REDES (YA CORREGIDAS) -->
     <div class="social-links text-center">
 
-        <a href="https://www.facebook.com/interconn.ofice/" target="_blank" rel="noopener noreferrer" class="facebook">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="facebook">
             <i class="bx bxl-facebook"></i>
         </a>
 
-        <a href="https://www.instagram.com/interconn_telecomunicacciones/" target="_blank" rel="noopener noreferrer" class="instagram">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="instagram">
             <i class="bx bxl-instagram"></i>
         </a>
 
-        <a href="https://wa.me/7751850054" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <a href="https://wa.me/527751376971" target="_blank" rel="noopener noreferrer" class="whatsapp">
             <i class="bx bxl-whatsapp"></i>
-            <span>Contáctanos</span>
         </a>
 
     </div>
 
     <nav class="nav-menu">
         <a href="#portada" class="scrollto">Inicio</a>
-        <a href="#about" class="scrollto">¿Quiénes somos?</a>
-        <a href="#resume" class="scrollto">Misión y Visión</a>
-        <a href="#proyectos" class="scrollto">Información</a>
+        <a href="#about" class="scrollto">Nosotros</a>
         <a href="#contact" class="scrollto">Contacto</a>
     </nav>
 
 </header>
 
-<!-- CONTENIDO -->
+<!-- ===== CONTENIDO ===== -->
 <main id="main">
 
+<!-- PORTADA -->
 <section id="portada">
-    <h1>INTERCONN TELECOMUNICACIONES</h1>
-    <p>Internet rápido y confiable</p>
+    <div class="portada-container">
+        <h1>INTERCONN TELECOMUNICACIONES</h1>
+        <p>Internet rápido, estable y confiable</p>
+    </div>
 </section>
 
-<section id="about">
-    <h2>¿Quiénes somos?</h2>
-    <p>Empresa mexicana fundada en 2018 en Hidalgo.</p>
+<!-- INFORMACIÓN EMPRESA -->
+<section id="about" class="info-section">
+
+    <h2 class="titulo-seccion">INTERCONN TELECOMUNICACIONES</h2>
+
+    <div class="info-grid">
+
+        <div class="info-card">
+            <h3>¿Quiénes somos?</h3>
+            <p>
+                Somos una empresa mexicana fundada en 2018 en el estado de Hidalgo,
+                dedicada a brindar servicios de internet residencial y empresarial,
+                enfocándonos en calidad, estabilidad y atención al cliente.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Misión</h3>
+            <p>
+                Brindar servicios de telecomunicaciones confiables y de alta calidad,
+                utilizando tecnología moderna para garantizar la mejor experiencia
+                de conectividad a nuestros clientes.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Visión</h3>
+            <p>
+                Ser una empresa líder en soluciones de conectividad en la región,
+                destacando por innovación, servicio y compromiso.
+            </p>
+        </div>
+
+    </div>
+
 </section>
 
-<section id="resume">
-    <h2>Misión</h2>
-    <p>Brindar servicios de alta calidad.</p>
-
-    <h2>Visión</h2>
-    <p>Ser líderes en conectividad.</p>
-</section>
-
-<section id="proyectos">
-    <h2>Información</h2>
-    <ul>
-        <li><a href="#">Título de concesión</a></li>
-        <li><a href="#">Constancia IFT</a></li>
-    </ul>
-</section>
-
+<!-- CONTACTO -->
 <section id="contact">
     <h2>Contacto</h2>
     <p>WhatsApp: 7751376971</p>
@@ -190,12 +102,13 @@ section {
 
 </main>
 
-<!-- WHATSAPP FLOTANTE -->
-<a href="https://wa.me/527751376971" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+<!-- WHATSAPP -->
+<a href="https://wa.me/527751376971" target="_blank" class="whatsapp-float">
     <i class="bx bxl-whatsapp"></i>
+    <span>Contáctanos</span>
 </a>
 
-<!-- SCRIPT -->
+<!-- JS -->
 <script>
 document.querySelectorAll('.scrollto').forEach(link => {
     link.addEventListener('click', function(e) {
@@ -204,22 +117,6 @@ document.querySelectorAll('.scrollto').forEach(link => {
             behavior: "smooth"
         });
     });
-});
-
-// Animaciones
-const sections = document.querySelectorAll("section");
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-});
-
-sections.forEach(sec => {
-    sec.classList.add("hidden");
-    observer.observe(sec);
 });
 </script>
 
