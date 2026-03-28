@@ -1,11 +1,10 @@
-/* ===== GENERAL ===== */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #f4f6f9;
 }
 
-/* ===== MENU ===== */
+/* MENU */
 #header {
     position: fixed;
     width: 260px;
@@ -20,7 +19,7 @@ body {
     padding: 30px;
 }
 
-/* ===== PORTADA ===== */
+/* PORTADA */
 .portada-container {
     background: linear-gradient(135deg, #0b3d91, #1e88e5);
     padding: 60px;
@@ -29,7 +28,7 @@ body {
     text-align: center;
 }
 
-/* ===== REDES ===== */
+/* REDES */
 .social-links a {
     display: inline-flex;
     width: 45px;
@@ -51,7 +50,7 @@ body {
 .instagram:hover { background: #e1306c; }
 .whatsapp:hover { background: #25d366; }
 
-/* ===== INFO EMPRESA ===== */
+/* INFO EMPRESA */
 .info-section {
     text-align: center;
 }
@@ -82,7 +81,48 @@ body {
     transform: translateY(-8px);
 }
 
-/* ===== WHATSAPP PRO ===== */
+/* DOCUMENTOS */
+.info-docs {
+    text-align: center;
+}
+
+.subtitulo {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.docs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.doc-card {
+    background: #fff;
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.doc-card i {
+    font-size: 40px;
+    color: red;
+}
+
+.doc-card:hover {
+    transform: translateY(-8px);
+}
+
+.destacado {
+    border: 2px solid #25d366;
+}
+
+/* WHATSAPP */
 .whatsapp-float {
     position: fixed;
     bottom: 25px;
@@ -95,10 +135,9 @@ body {
     padding: 12px 18px;
     border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     #header {
         position: relative;
